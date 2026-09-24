@@ -42,50 +42,122 @@ body {
 .sc25,
 .sc26,
 .sc27 {
+  position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: #ddccb8;
   display: block;
-  padding-top: 36px;
+  padding: 54px 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  isolation: isolate;
+}
+
+.sc1,
+.sc3,
+.sc5,
+.sc7,
+.sc9,
+.sc11,
+.sc13,
+.sc15,
+.sc17,
+.sc19,
+.sc21,
+.sc23,
+.sc25,
+.sc27 {
+  background-image: linear-gradient(rgba(20, 14, 10, 0.28), rgba(20, 14, 10, 0.36)), url('./imges/fon1.png');
+}
+
+.sc2,
+.sc4,
+.sc6,
+.sc8,
+.sc10,
+.sc12,
+.sc14,
+.sc16,
+.sc18,
+.sc20,
+.sc22,
+.sc24,
+.sc26 {
+  background-image: linear-gradient(rgba(18, 14, 11, 0.24), rgba(18, 14, 11, 0.42)), url('./imges/fon2.png');
+}
+
+.sc1::before,
+.sc2::before,
+.sc3::before,
+.sc4::before,
+.sc5::before,
+.sc6::before,
+.sc7::before,
+.sc8::before,
+.sc9::before,
+.sc10::before,
+.sc11::before,
+.sc12::before,
+.sc13::before,
+.sc14::before,
+.sc15::before,
+.sc16::before,
+.sc17::before,
+.sc18::before,
+.sc19::before,
+.sc20::before,
+.sc21::before,
+.sc22::before,
+.sc23::before,
+.sc24::before,
+.sc25::before,
+.sc26::before,
+.sc27::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.06);
+  z-index: -1;
 }
 .sec1{
   width: 100%;
-  height: 1700px;
+  min-height: 600px;
   background-color: #b1a090;
   margin-top: 60px;
   border-radius: 10px;
- 
+  padding: 30px 0;
 }
 
-.dad2{
-  width: 1120px;
-  height: 300px;
-  background-color: #dac8b0;
-  margin-top: 60px;
-}
+
 .dad3{
-  width: 1140px;
-  height: 300px;
-   background-color: #dac8b0;
-   margin-top: 50px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: 30px;
-}
-.dad4,.dad5,.dad6,.dad7{
-  width: 1140px;
-  height: 300px;
-   background-color: #dac8b0;
-  margin-top: 60px;
+  max-width: 1140px;
+  width: 100%;
+  background-color: #dac8b0;
+  margin: 50px auto 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
+  padding: 18px;
+}
+.dad4,.dad5,.dad6,.dad7{
+  max-width: 1140px;
+  width: 100%;
+  background-color: #dac8b0;
+  margin: 40px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 18px;
 }
 .d1,.d2,.d3,.d4,.d5,.d6,.d7,.d8,.d9,.d10,.d11,.d12,.d13,.d14,.d15,.d16,.d17,.d18,.d19,.d20,.d21,.d22,.d23,.d24,.d25,.d26{
+  flex: 0 0 130px;
   width: 130px;
-  height: 170px;
+  aspect-ratio: 13 / 17;
   overflow: hidden;
   border-radius: 12px;
   position: relative;
@@ -148,11 +220,14 @@ main {
 .ds7,
 .ds8,
 .ds9 {
-  background: rgba(255, 251, 246, 0.88);
-  border: 1px solid rgba(122, 92, 63, 0.12);
-  border-radius: 18px;
-  padding: 18px 22px;
-  box-shadow: 0 10px 20px rgba(72, 52, 38, 0.08);
+  max-width: 1180px;
+  margin: 0 auto;
+  background: rgba(255, 249, 242, 0.76);
+  border: 1px solid rgba(125, 89, 59, 0.15);
+  box-shadow: 0 22px 50px rgba(26, 18, 11, 0.18);
+  backdrop-filter: blur(6px);
+  border-radius: 22px;
+  padding: 28px 28px 18px;
 }
 
 .ds1 h1,
@@ -166,9 +241,9 @@ main {
 .ds9 h1 {
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   line-height: 1.2;
-  color: #3b2d22;
+  color: #3d2b22;
   margin: 0 0 8px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
 }
 
 .ds1 h4,
@@ -181,7 +256,7 @@ main {
 .ds8 h4,
 .ds9 h4 {
   font-size: 1.2rem;
-  color: #6d4d39;
+  color: #7b4d21;
   margin: 12px 0 6px;
 }
 
@@ -203,8 +278,8 @@ main {
 .ds7 li,
 .ds8 li,
 .ds9 li {
-  color: #433b35;
-  line-height: 1.7;
+  color: #443128;
+  line-height: 1.75;
   font-size: 1rem;
   text-align: justify;
   margin: 0 0 6px;
@@ -223,6 +298,9 @@ li {
   --c1: #fffaf4;
   --c2: #f1dfc0;
   --size-letter: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.8em 1.4em;
   font-size: var(--size-letter);
   background: rgba(255, 255, 255, 0.08);
@@ -233,6 +311,7 @@ li {
   overflow: hidden;
   transition: all 0.35s ease;
   box-shadow: 0 10px 24px rgba(72, 52, 38, 0.16);
+  text-decoration: none;
 }
 
 .button .text {
@@ -331,4 +410,27 @@ button {
 }
 .a1,.a2{
   text-decoration: none;
+}
+
+.a1,
+.a2 {
+  display: inline-flex;
+}
+
+/* Responsive adjustments for prophet cards */
+@media (max-width: 900px) {
+  .d1,.d2,.d3,.d4,.d5,.d6,.d7,.d8,.d9,.d10,.d11,.d12,.d13,.d14,.d15,.d16,.d17,.d18,.d19,.d20,.d21,.d22,.d23,.d24,.d25,.d26{
+    flex: 0 0 25%;
+    width: calc(25% - 16px);
+  }
+}
+@media (max-width: 500px) {
+  .d1,.d2,.d3,.d4,.d5,.d6,.d7,.d8,.d9,.d10,.d11,.d12,.d13,.d14,.d15,.d16,.d17,.d18,.d19,.d20,.d21,.d22,.d23,.d24,.d25,.d26{
+    flex: 0 0 45%;
+    width: calc(50% - 12px);
+  }
+  .dad3, .dad4, .dad5, .dad6, .dad7{
+    padding: 12px;
+    gap: 12px;
+  }
 }
